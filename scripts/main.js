@@ -5721,3 +5721,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Your game initialization code here
 	console.log("Game has started!");
   }
+
+
+
+// Create an image element
+const brandingImage = document.createElement('img');
+brandingImage.src = 'images/branding.png'; // Path to the branding image
+brandingImage.alt = 'Branding'; // Alt text for accessibility
+brandingImage.style.position = 'fixed'; // Fixed position
+brandingImage.style.bottom = '10px'; // Position from the bottom
+brandingImage.style.right = '30px'; // Position from the right
+brandingImage.style.width = '150px'; // Set width (adjust as needed)
+brandingImage.style.height = 'auto'; // Maintain aspect ratio
+brandingImage.style.zIndex = '1000'; // Ensure it's on top of other elements
+
+// Append the image to the body
+document.body.appendChild(brandingImage);
+
+// Example: Game loop or other game-related code
+function gameLoop() {
+    // Your game logic here
+    requestAnimationFrame(gameLoop);
+}
+
+// Start the game loop
+gameLoop();
